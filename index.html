@@ -1,0 +1,182 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>NJ Anjuman-e-Burhani Miqaats</title>
+<meta name="description" content="Add the Anjuman-e-Burhani New Jersey miqaat calendar to your phone.">
+<style>
+  :root {
+    --bg: #fbfaf7;
+    --card: #ffffff;
+    --ink: #1c1b18;
+    --muted: #6b6862;
+    --line: #e3ded3;
+    --accent: #1a5c4a;
+    --accent-ink: #ffffff;
+    --note: #f3efe6;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --bg: #16151300;
+      --bg: #161513;
+      --card: #1f1e1b;
+      --ink: #f0ede6;
+      --muted: #a5a099;
+      --line: #33312c;
+      --accent: #4ea88b;
+      --accent-ink: #10221c;
+      --note: #24231f;
+    }
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    padding: 2rem 1.1rem 3.5rem;
+    background: var(--bg);
+    color: var(--ink);
+    font: 17px/1.6 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    -webkit-text-size-adjust: 100%;
+  }
+  main { max-width: 34rem; margin: 0 auto; }
+  header { text-align: center; margin-bottom: 2rem; }
+  h1 { font-size: 1.5rem; line-height: 1.25; margin: 0 0 .4rem; letter-spacing: -.01em; }
+  .sub { color: var(--muted); margin: 0; font-size: .95rem; }
+  .card {
+    background: var(--card);
+    border: 1px solid var(--line);
+    border-radius: 14px;
+    padding: 1.25rem;
+    margin-bottom: 1rem;
+  }
+  h2 { font-size: 1.05rem; margin: 0 0 .35rem; }
+  .card p { margin: 0 0 1rem; color: var(--muted); font-size: .93rem; }
+  .btn {
+    display: block;
+    text-align: center;
+    padding: .9rem 1rem;
+    border-radius: 10px;
+    background: var(--accent);
+    color: var(--accent-ink);
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 1rem;
+  }
+  .btn.secondary {
+    background: transparent;
+    color: var(--ink);
+    border: 1px solid var(--line);
+    font-weight: 500;
+  }
+  details {
+    border-top: 1px solid var(--line);
+    margin-top: 1rem;
+    padding-top: .9rem;
+  }
+  summary { cursor: pointer; font-size: .9rem; font-weight: 600; }
+  details p, details ol { font-size: .89rem; color: var(--muted); }
+  ol { padding-left: 1.15rem; margin: .7rem 0 0; }
+  li { margin-bottom: .45rem; }
+  .url {
+    display: block;
+    word-break: break-all;
+    background: var(--note);
+    border: 1px solid var(--line);
+    border-radius: 8px;
+    padding: .6rem .7rem;
+    font: 12px/1.5 ui-monospace, SFMono-Regular, Menlo, monospace;
+    color: var(--ink);
+    margin: .6rem 0;
+  }
+  button.copy {
+    width: 100%;
+    padding: .6rem;
+    border-radius: 8px;
+    border: 1px solid var(--line);
+    background: transparent;
+    color: var(--ink);
+    font: inherit;
+    font-size: .88rem;
+    cursor: pointer;
+  }
+  .note {
+    background: var(--note);
+    border-radius: 12px;
+    padding: 1rem 1.1rem;
+    font-size: .89rem;
+    color: var(--muted);
+  }
+  .note strong { color: var(--ink); }
+  footer { text-align: center; margin-top: 2rem; font-size: .8rem; color: var(--muted); }
+</style>
+</head>
+<body>
+<main>
+  <header>
+    <h1>NJ Anjuman-e-Burhani Miqaats</h1>
+    <p class="sub">Add the jamaat miqaat calendar to your phone</p>
+  </header>
+
+  <section class="card">
+    <h2>iPhone and iPad</h2>
+    <p>Opens Apple Calendar and asks you to subscribe.</p>
+    <a class="btn" id="apple"
+       href="webcal://calendar.google.com/calendar/ical/30719c95d7719db27837683f5605dea90dffaef4e3a9519650e87ed29f446105%40group.calendar.google.com/public/basic.ics">
+       Add to iPhone Calendar</a>
+
+    <details>
+      <summary>It did not open Calendar</summary>
+      <p>Copy this address, then go to Settings &rarr; Calendar &rarr; Accounts &rarr;
+         Add Account &rarr; Other &rarr; Add Subscribed Calendar, and paste it.</p>
+      <code class="url" id="urltext">https://calendar.google.com/calendar/ical/30719c95d7719db27837683f5605dea90dffaef4e3a9519650e87ed29f446105%40group.calendar.google.com/public/basic.ics</code>
+      <button class="copy" id="copy">Copy address</button>
+    </details>
+
+    <details>
+      <summary>Make it update properly</summary>
+      <p>iPhones check subscribed calendars once a week by default, so timing changes
+         will not reach you. Go to Settings &rarr; Calendar &rarr; Accounts &rarr;
+         Fetch New Data &rarr; Refresh Calendars, and choose the shortest option.</p>
+    </details>
+  </section>
+
+  <section class="card">
+    <h2>Android, or Google Calendar on a computer</h2>
+    <p>Adds the calendar to your Google account.</p>
+    <a class="btn secondary"
+       href="https://calendar.google.com/calendar/u/0?cid=MzA3MTljOTVkNzcxOWRiMjc4Mzc2ODNmNTYwNWRlYTkwZGZmYWVmNGUzYTk1MTk2NTBlODdlZDI5ZjQ0NjEwNUBncm91cC5jYWxlbmRhci5nb29nbGUuY29t">
+       Add to Google Calendar</a>
+  </section>
+
+  <section class="note">
+    <p><strong>On an iPhone but you use the Google Calendar app?</strong>
+       The Google Calendar app cannot add a calendar on a phone, on any platform.
+       Use the Add to Google Calendar button above once from a computer, and it will
+       then appear in the app on your phone. If you would rather not use a computer,
+       use the iPhone Calendar button instead and the miqaats will show in the
+       Calendar app that came with your phone.</p>
+    <p style="margin-bottom:0"><strong>About the timings.</strong>
+       Dates come from the Misri calendar. Times follow the jamaat's own
+       announcements and firm up in the week before each program, so anything
+       further out is a placeholder. Reconcile against the printed taqweem.</p>
+  </section>
+
+  <footer>Anjuman-e-Burhani, New Jersey &middot; 1448H</footer>
+</main>
+
+<script>
+  document.getElementById('copy').addEventListener('click', function () {
+    var text = document.getElementById('urltext').textContent.trim();
+    var done = function () { this.textContent = 'Copied'; }.bind(this);
+    if (navigator.clipboard) {
+      navigator.clipboard.writeText(text).then(done, done);
+    } else {
+      var t = document.createElement('textarea');
+      t.value = text; document.body.appendChild(t); t.select();
+      try { document.execCommand('copy'); } catch (e) {}
+      document.body.removeChild(t); done();
+    }
+  });
+</script>
+</body>
+</html>
