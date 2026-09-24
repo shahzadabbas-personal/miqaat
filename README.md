@@ -1,7 +1,8 @@
 # miqaat
 
 A single page that helps people add the Anjuman-e-Burhani New Jersey miqaat
-calendar to their phone.
+calendar to their phone, and optionally a second calendar with the Misri date
+on every day.
 
 It exists because the calendar link Google generates does not survive being
 shared. WhatsApp will not turn a `webcal://` address into something tappable,
